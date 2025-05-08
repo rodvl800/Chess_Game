@@ -1,5 +1,3 @@
-// jshint esversion: 6
-// jshint browser: true
 
 let pieces = [];
 
@@ -87,7 +85,6 @@ Castle.prototype = new Piece();
 
 Castle.prototype.isValidMove = function(toSquare,n=1){
     if(n==0) return {valid:false, capture:null};
-    //Piece.prototype.isValidMove.apply(this, arguments);
 	let movementY = (toSquare.y-this.y);
 	let movementX = (toSquare.x-this.x);
 	let directionX = movementX ? (movementX / Math.abs(movementX)) : 0;
